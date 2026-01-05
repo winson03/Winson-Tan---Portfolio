@@ -1,72 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Winson Tan | Junior Web Developer</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero">
-    <h1>Winson Tan</h1>
-    <p>Junior Web Developer | IT Fresh Graduate</p>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      IT fresh graduate with experience in building responsive websites and
-      WordPress customization. Interested in web development and continuously
-      improving technical skills.
-    </p>
-  </section>
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winson Tan | Junior Web Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    
+    </head>
 
-  <section>
-    <h2>Projects</h2>
+    <body>
+        <!-- Navigation -->
+        <nav class="nav-wrapper">
+            <ul class="nav">
+            <div class="nav-indicator"></div>
 
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>Personal portfolio website built using HTML, CSS, and JavaScript.</p>
-    </div>
+            <li class="nav-item active"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="#resume">Resume</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-    <div class="project">
-      <h3>WordPress Business Website</h3>
-      <p>
-        Customized WordPress theme based on client requirements and fixed layout
-        and plugin issues.
-      </p>
-    </div>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Hello,</h1>
+                    <div class="hero-name">
+                        <h1>I'm <span class="highlight-name">Tan Weng Soon</span></h1>
+                        <h3>(Winson)</h3>
+                    </div>
 
-    <div class="project">
-      <h3>Final Year Project</h3>
-      <p>
-        Academic project developed as part of Bachelor of Information Technology
-        program.
-      </p>
-    </div>
-  </section>
+                    <h2>Software Engineer (Fresh Graduate)</h2>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>WordPress</li>
-      <li>PHP (Basic)</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
+                    <p class="hero-about">
+                        Passionate about building responsive web applications using HTML, CSS, PHP, and MySQL.
+                    </p>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: winson03tan@gmail.com</p>
-    <p>
-      GitHub:
-      <a href="https://github.com/yourusername" target="_blank">
-        https://github.com/yourusername
-      </a>
-    </p>
-  </section>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
 
-  <script src="script.js"></script>
-</body>
+                    <div class="social-icons">
+                        <a href="https://github.com/winson03" target="_blank" aria-label="GitHub">
+                            <img src="https://img.icons8.com/?size=100&id=FVTvJkWPqGJ3&format=png&color=000000" alt="GitHub" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/weng-soon-tan-784162273/" target="_blank" aria-label="LinkedIn">
+                            <img src="https://img.icons8.com/?size=100&id=Fto28UC6Owy0&format=png&color=000000" alt="LinkedIn" />
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-image">
+                    <img src="image/photo_Tan Weng Soon_14:12:2023 Background Removed.png" alt="Tan Weng Soon" />
+
+                    <span class="bubble bubble-1">Problem Solver</span>
+                    <span class="bubble bubble-2">Web Development</span>
+                    <span class="bubble bubble-3">Continuous Learning</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+
+            <div class="about-intro">
+                <p>
+                    I am an Information Technology graduate based in Malaysia with a focus on
+                    software engineering and web development.
+                </p>
+
+                <p>
+                    I enjoy building web applications and learning through hands-on projects.
+                    I mainly work with core web technologies such as HTML, CSS, PHP, and MySQL,
+                    while continuously exploring other tools and technologies when required.
+                </p>
+
+                <p>
+                    I am interested in writing clean code, improving problem-solving skills,
+                    and gaining real-world experience as a junior software or web developer.
+                </p>
+            </div>
+
+            <div class="education-section">
+                <h3 class="education-header">Education</h3>
+                <div class="education-cards">
+                    <div class="education-card">
+                        <h4>Bachelor of Information Technology</h4>
+                        <p class="major">Major in Software Engineering</p>
+                        <p class="school">SEGi University, Kota Damansara</p>
+                        <p class="dates">Jan 2024 – Dec 2025</p>
+                        <p class="cgpa">Estimated CGPA: 3.73</p>
+                    </div>
+
+                    <div class="education-card">
+                        <h4>Diploma of Information Technology</h4>
+                        <p class="school">SEGi College, Kota Damansara</p>
+                        <p class="dates">Jun 2021 – Dec 2023</p>
+                        <p class="cgpa">CGPA: 3.10</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-section">
+            <h2>Working Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <span class="timeline-date">June - Aug 2023</span>
+                        <h3 class="timeline-role">IT Support Intern</h3>
+                        <p class="timeline-company">Bitlink System Sdn Bhd</p>
+                        <ul class="timeline-desc">
+                            <li>Assisted in hardware/software troubleshooting and network setup</li>
+                            <li>Provided remote and on-site IT support</li>
+                            <li>Conducted product testing for Kandao & Nearity</li>
+                            <li>Manage order processing and warranty checks</li>
+                        </ul>
+                        <div class="icon">
+                            <img src="https://img.icons8.com/?size=100&id=SMgCYYglC7rK&format=png&color=000000" alt="Work icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="content">
+                        <span class="timeline-date">May - Aug 2025</span>
+                        <h3 class="timeline-role">Intern Web Developer</h3>
+                        <p class="timeline-company">Latitude Innovation Sdn Bhd</p>
+                        <ul class="timeline-desc">
+                            <li>Developed and maintained WordPress websites with custom themes and plugins</li>
+                            <li>Built responsive layouts for desktop and mobile devices</li>
+                            <li>Fixed bugs and updated website features based on requirements</li>
+                            <li>Met with clients to gather requirements and discuss project goals</li>
+                            <li>Designed website layouts, posters, and social media visuals</li>
+                            <li>Updated SEO settings, improved website security, and monitored site traffic</li>
+                        </ul>
+
+                        <div class="icon">
+                            <img src="https://img.icons8.com/?size=100&id=ZdwZJUj9oxx9&format=png&color=000000" alt="Work icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+
+            <div class="skills-row single-row">
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <div class="skill-icons">
+                        <div class="skill">
+                            <img src="image/HTML.png" alt="HTML">
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/CSS.png" alt="CSS">
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/JS.png" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/PHP.png" alt="PHP">
+                            <span>PHP</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/JQuery.png" alt="jQuery">
+                            <span>jQuery</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Bootstrap.png" alt="Bootstrap">
+                            <span>Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-row two-row">
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <div class="skill-icons">
+                        <div class="skill">
+                            <img src="image/MySQL.png" alt="MySQL">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/phpMyAdmin.png" alt="phpMyAdmin">
+                            <span>phpMyAdmin</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Microsoft Access.png" alt="Microsoft Access">
+                            <span>Microsoft Access</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Firebase.png" alt="Firebase">
+                            <span>Firebase</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/SQLite.png" alt="SQLite">
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Mobile & Apps</h3>
+                    <div class="skill-icons">
+                        <div class="skill">
+                            <img src="image/Flutter.png" alt="Flutter">
+                            <span>Flutter</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Android Studio.png" alt="Android Studio">
+                            <span>Android Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Science</h3>
+                    <div class="skill-icons">
+                        <div class="skill">
+                            <img src="image/Python.png" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Jupyter.png" alt="Jupyter Notebook">
+                            <span>Jupyter Notebook</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Google Colab.png" alt="Google Colab">
+                            <span>Google Colab</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools & Design</h3>
+                    <div class="skill-icons">
+                        <div class="skill">
+                            <img src="image/Wordpress.png" alt="WordPress">
+                            <span>WordPress</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Figma.png" alt="Figma">
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/Dreamweaver.png" alt="Adobe Dreamweaver">
+                            <span>Dreamweaver</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/VS.png" alt="Visual Studio">
+                            <span>Visual Studio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Projects</h2>
+                <div class="projects-tabs-wrapper">
+                    <div class="projects-tabs">
+                        <button class="tab-btn active" data-tab="university">University Projects</button>
+                        <button class="tab-btn" data-tab="intern">Internship Projects</button>
+                    </div>
+                </div>
+
+                <div class="projects-showcase" data-tab-content="university">
+                    <div class="showcase-card" data-project="segipay">
+                        <h4>SEGiPay Bursary System</h4>
+                        <p class="subtitle">University Financial Aid Web System</p>
+                        <img src="image/FYP Degree Project.svg" class="layer layer-1" alt="FYP Project">
+                        <p class="description">
+                        Real-time university payment system with integrated online payment gateway and transaction management.
+                        </p>
+                        <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
+                    </div>
+
+                    <div class="showcase-card" data-project="petopia">
+                        <h4>Petopia</h4>
+                        <p class="subtitle">Veterinary Appointment System</p>
+                        <img src="image/FYP Diploma Project.svg" class="layer layer-1" alt="FYP Project">
+                        <p class="description">
+                        A web-based online booking system for pet owners to schedule veterinary appointments easily.
+                        </p>
+                        <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
+                    </div>
+
+                    <div class="showcase-card" data-project="cookin5">
+                        <h4>CookIn5</h4>
+                        <p class="subtitle">5-Minute Recipe Mobile App</p>
+                        <img src="image/Mobile Project.svg" class="layer layer-1" alt="Mobile Application">
+                        <p class="description">
+                        Mobile app that helps users discover quick, practical recipes ready in under five minutes.
+                        </p>
+                        <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
+                    </div>
+                </div>
+
+                <div class="projects-showcase" data-tab-content="intern" style="display: none;">
+                    <div class="showcase-card">
+                        <h4>Landing Page</h4>
+                        <p class="subtitle">Kindergarten & School Websites</p>
+                        <img src="image/Landing Page.png" class="layer layer-1" alt="Landing Page">
+                        <p class="description">
+                        Created live landing pages for schools and kindergartens, focusing on layout design, content structure, and deployment.
+                        </p>
+                        <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
+                    </div>
+
+                    <div class="showcase-card">
+                        <h4>Petopia</h4>
+                        <p class="subtitle">Veterinary Appointment System</p>
+                        <img src="image/FYP Diploma Project.png" class="layer layer-1" alt="FYP Project">
+                        <p class="description">
+                        A web-based online booking system for pet owners to schedule veterinary appointments easily.
+                        </p>
+                        <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
+                    </div>
+
+                    <div class="showcase-card">
+                        <h4>CookIn5</h4>
+                        <p class="subtitle">5-Minute Recipe Mobile App</p>
+                        <img src="image/Mobile Project.png" class="layer layer-1" alt="Mobile Application">
+                        <p class="description">
+                        Mobile app that helps users discover quick, practical recipes ready in under five minutes.
+                        </p>
+                        <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
+                    </div>
+                </div>
+
+                <div class="project-modal" id="projectModal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+
+                        <h3 id="modalTitle"></h3>
+                        <p id="modalSubtitle" class="modal-subtitle"></p>
+
+                        <div class="modal-slider">
+                            <button class="slide-btn prev">‹</button>
+
+                            <div class="slider-viewport">
+                                <img id="modalImage" src="" alt="">
+                            </div>
+
+                            <button class="slide-btn next">›</button>
+                        </div>
+
+                        <div class="modal-links">
+                            <a id="modalLive" target="_blank"><img src="https://img.icons8.com/?size=100&id=JoX3PEZS0bxl&format=png&color=000000" alt="Website"></a>
+                            <a id="modalGithub" target="_blank"><img src="https://img.icons8.com/?size=100&id=FVTvJkWPqGJ3&format=png&color=000000" alt="Github"></a>
+                        </div>
+
+                        <div class="modal-overview">
+                            <h4>Overview</h4>
+                            <p id="modalOverview"></p>
+                        </div>
+
+                        <div class="modal-section">
+                            <h4>Key Features</h4>
+                            <ul id="modalFeatures"></ul>
+                        </div>
+
+                        <div class="modal-section">
+                            <h4>Tech Stack</h4>
+                            <ul id="modalStack"></ul>
+                        </div>
+
+                        <div class="modal-section">
+                            <h4>My Role</h4>
+                            <p id="modalRole"></p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        
+    <script src="script.js"></script>
+    </body>
 </html>
