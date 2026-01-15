@@ -1,3 +1,9 @@
+// Hide loading overlay when page is fully loaded
+window.addEventListener("load", function() {
+  const overlay = document.getElementById("loading-overlay");
+  overlay.style.display = "none";
+});
+
 const items = document.querySelectorAll(".nav-item");
 const indicator = document.querySelector(".nav-indicator");
 const sections = document.querySelectorAll("section");
@@ -219,7 +225,7 @@ let currentSlide = 0;
 let autoSlideTimer = null;
 const AUTO_SLIDE_DELAY = 3000;
 
-const projectModal = document.getElementById("projectModal");
+const projectModal = document.getElementById("projectModalUniversity");
 
 const modalTitle = document.getElementById("modalTitle");
 const modalSubtitle = document.getElementById("modalSubtitle");
@@ -363,4 +369,275 @@ projectModal.addEventListener("click", e => {
   if (e.target === projectModal) closeModal();
 });
 
-window.addEventListener("load", closeModal);
+const internProjects = {
+  landing: {
+    title: "Landing Pages",
+    subtitle: "School & Kindergarten Websites",
+    images: [
+      "image/Landing Page/Landing Page.png",
+      "image/Landing Page/Landing Page (2).png",
+      "image/Landing Page/Landing Page (3).png",
+      "image/Landing Page/Landing Page (4).png"
+    ],
+    role:
+      "Handled end-to-end delivery of responsive landing pages, from client communication and design iteration to development, deployment, SEO setup, and post-launch monitoring.",
+    links: [
+      { name: "Bear N Bunny Nursery & Preschool", url: "https://bearnbunny.com.my/" },
+      { name: "Chrisdale Kindergarten", url: "https://www.chrisdalekindergarten.com.my/" },
+      { name: "Ankiu Child Care Centre", url: "https://www.ankiuchildcare.com.my/" },
+      { name: "WeKids Preschool", url: "https://www.wekids.com.my/" }
+    ]
+  },
+
+  corporate: {
+    title: "Corporate & E-commerce",
+    subtitle: "5-Page & Online Store Websites",
+    images: [
+      "image/Corporate/Corporate (2).png",
+      "image/Corporate/Corporate (3).png",
+      "image/Corporate/Corporate (4).png",
+      "image/Corporate/Corporate (5).png"
+    ],
+    role:
+      "Handled frontend and UI/UX for selected projects, collaborated on others, communicated with clients, proposed design options, implemented approved designs, supported testing, and published final websites. Backend was developed by teammates.",
+    links: [
+      { name: "Handal Ceria", url: "https://handalceria.com.my/" },
+      { name: "Fujihub", url: "https://fujihub.com.my/" },
+      { name: "Novavista", url: "https://novavistastudios.com/" },
+      { name: "CWorks", url: "https://cworkscare.com/" }
+    ]
+  },
+
+  update: {
+    title: "Website Updates",
+    subtitle: "Maintaining & Improving Existing Sites",
+    images: [
+      "image/Update Websites/Update Websites (2).png",
+      "image/Update Websites/Update Websites (3).png",
+      "image/Update Websites/Update Websites (4).png",
+      "image/Update Websites/Update Websites (5).png"
+    ],
+    role:
+      "Handled website updates based on client requirements, suggested design and layout improvements, and implemented approved changes to enhance user experience.",
+    links: [
+      { name: "Makersoul", url: "https://www.makersoul.io/" },
+      { name: "Nano Food", url: "https://www.nanofood.com.my/" },
+      { name: "Naga Maxamp", url: "https://nagamaxamp.com/" },
+      { name: "Green Journey Enterprise", url: "https://greenjourneyenterprise.com/" }
+    ]
+  }
+};
+
+const internModal = document.getElementById("projectModalIntern");
+
+const internTitle = document.getElementById("internTitle");
+const internSubtitle = document.getElementById("internSubtitle");
+const internImage = document.getElementById("internImage");
+const internLinks = document.getElementById("internLinks");
+const internRole = document.getElementById("internRole");
+
+let internSlideImages = [];
+let internCurrentSlide = 0;
+let internAutoSlideTimer = null;
+const INTERN_AUTO_SLIDE_DELAY = 3000;
+
+const internSliderArea = internModal.querySelector(".modal-slider");
+const internNextBtn = internModal.querySelector(".slide-btn.next");
+const internPrevBtn = internModal.querySelector(".slide-btn.prev");
+
+function showInternSlide(index, direction = "next") {
+  if (!internSlideImages.length) return;
+
+  internImage.classList.remove("slide-in");
+  internImage.classList.add(
+    direction === "next" ? "slide-out-left" : "slide-out-right"
+  );
+
+  setTimeout(() => {
+    internImage.src = internSlideImages[index];
+
+    internImage.classList.remove("slide-out-left", "slide-out-right");
+    internImage.classList.add("slide-in");
+  }, 200);
+}
+
+function internNextSlide() {
+  if (internSlideImages.length <= 1) return;
+  internCurrentSlide =
+    (internCurrentSlide + 1) % internSlideImages.length;
+  showInternSlide(internCurrentSlide, "next");
+}
+
+function internPrevSlide() {
+  if (internSlideImages.length <= 1) return;
+  internCurrentSlide =
+    (internCurrentSlide - 1 + internSlideImages.length) %
+    internSlideImages.length;
+  showInternSlide(internCurrentSlide, "prev");
+}
+
+function startInternAutoSlide() {
+  stopInternAutoSlide();
+  if (internSlideImages.length <= 1) return;
+
+  internAutoSlideTimer = setInterval(
+    internNextSlide,
+    INTERN_AUTO_SLIDE_DELAY
+  );
+}
+
+function stopInternAutoSlide() {
+  if (internAutoSlideTimer) {
+    clearInterval(internAutoSlideTimer);
+    internAutoSlideTimer = null;
+  }
+}
+
+/* 打开 internship modal */
+document
+  .querySelectorAll('.projects-showcase[data-tab-content="intern"] .showcase-card')
+  .forEach(card => {
+    card.addEventListener("click", () => {
+      const key = card.dataset.intern;
+      if (!key || !internProjects[key]) return;
+
+      const p = internProjects[key];
+
+      internTitle.textContent = p.title;
+      internSubtitle.textContent = p.subtitle;
+      internRole.textContent = p.role;
+
+      /* images */
+      internSlideImages = p.images || [];
+      internCurrentSlide = 0;
+      showInternSlide(0);
+      startInternAutoSlide();
+
+      internNextBtn.onclick = () => {
+        stopInternAutoSlide();
+        internNextSlide();
+      };
+
+      internPrevBtn.onclick = () => {
+        stopInternAutoSlide();
+        internPrevSlide();
+      };
+
+      [internSliderArea, internNextBtn, internPrevBtn].forEach(el => {
+        if (!el) return;
+        el.addEventListener("mouseenter", stopInternAutoSlide);
+        el.addEventListener("mouseleave", startInternAutoSlide);
+      });
+
+      /* links */
+      internLinks.innerHTML = "";
+
+      p.links.forEach(link => {
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.target = "_blank";
+        a.className = "intern-link";
+
+        const img = document.createElement("img");
+        img.src =
+          "https://img.icons8.com/?size=100&id=JoX3PEZS0bxl&format=png&color=000000";
+        img.alt = link.name;
+
+        const span = document.createElement("span");
+        span.textContent = link.name;
+
+        a.appendChild(img);
+        a.appendChild(span);
+
+        internLinks.appendChild(a);
+      });
+
+      internModal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+/* slider buttons */
+internModal.querySelector(".next").onclick = () => {
+  if (internImages.length <= 1) return;
+  internIndex = (internIndex + 1) % internImages.length;
+  internImage.src = internImages[internIndex];
+};
+
+internModal.querySelector(".prev").onclick = () => {
+  if (internImages.length <= 1) return;
+  internIndex =
+    (internIndex - 1 + internImages.length) % internImages.length;
+  internImage.src = internImages[internIndex];
+};
+
+/* close */
+internModal.querySelector(".modal-close").onclick = () => {
+  internModal.style.display = "none";
+  document.body.style.overflow = "";
+  stopInternAutoSlide();
+};
+
+internModal.addEventListener("click", e => {
+  if (e.target === internModal) {
+    internModal.style.display = "none";
+    document.body.style.overflow = "";
+    stopInternAutoSlide();
+  }
+});
+
+/* Send Message */
+emailjs.init("3fUP8vG0yRiYC19xP"); // public key
+
+const form = document.getElementById("emailContactForm");
+const btn = document.getElementById("sendBtn");
+const btnText = btn.querySelector(".btn-text");
+const loader = btn.querySelector(".btn-loader");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    btn.disabled = true;
+    btnText.textContent = "Sending...";
+    loader.classList.add("show");
+
+    grecaptcha.ready(function () {
+      grecaptcha.execute("6LfR-EcsAAAAAD-6Rn-s3NMvO0Xt7X7-rkGbLI3I", { action: "contact" }).then(function (token) {
+        
+        let tokenInput = form.querySelector("input[name='g-recaptcha-response']");
+        if (!tokenInput) {
+          tokenInput = document.createElement("input");
+          tokenInput.type = "hidden";
+          tokenInput.name = "g-recaptcha-response";
+          form.appendChild(tokenInput);
+        }
+        tokenInput.value = token;
+
+        emailjs
+          .sendForm("service_g2s08c3", "template_iqfslrn", form)
+          .then(() => {
+            btnText.textContent = "Sent!";
+            loader.classList.remove("show");
+            form.reset();
+            setTimeout(() => {
+              btnText.textContent = "Send Message";
+              btn.disabled = false;
+            }, 2500);
+          })
+          .catch(() => {
+            btnText.textContent = "Failed";
+            loader.classList.remove("show");
+            setTimeout(() => {
+              btnText.textContent = "Send Message";
+              btn.disabled = false;
+            }, 2500);
+          });
+
+      });
+    });
+  });
+}
+
+/* Footer Year */
+document.getElementById("year").textContent = new Date().getFullYear();

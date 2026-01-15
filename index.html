@@ -4,12 +4,24 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Winson Tan | Junior Web Developer</title>
+    <title>Winson Tan | Software Engineering Graduate Portfolio</title>
+    <link rel="icon" href="image/Favicon.ico">
     <link rel="stylesheet" href="style.css" />
     
     </head>
 
     <body>
+        <!-- Loading Overlay -->
+        <div id="loading-overlay">
+            <section class="dots-container">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </section>
+        </div>
+
         <!-- Navigation -->
         <nav class="nav-wrapper">
             <ul class="nav">
@@ -18,7 +30,7 @@
             <li class="nav-item active"><a href="#home">Home</a></li>
             <li class="nav-item"><a href="#about">About</a></li>
             <li class="nav-item"><a href="#projects">Projects</a></li>
-            <li class="nav-item"><a href="#resume">Resume</a></li>
+            <li class="nav-item"><a href="resume/Tan-Weng-Soon-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
             <li class="nav-item"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -33,10 +45,13 @@
                         <h3>(Winson)</h3>
                     </div>
 
-                    <h2>Software Engineer (Fresh Graduate)</h2>
+                    <h2 class="hero-title">
+                        Software Engineer
+                        <span class="hero-sub">(Fresh Graduate)</span>
+                    </h2>
 
                     <p class="hero-about">
-                        Passionate about building responsive web applications using HTML, CSS, PHP, and MySQL.
+                        Software Engineering background with experience in real-world IT projects through internships.
                     </p>
 
                     <div class="hero-buttons">
@@ -58,9 +73,9 @@
                 <div class="hero-image">
                     <img src="image/photo_Tan Weng Soon_14:12:2023 Background Removed.png" alt="Tan Weng Soon" />
 
-                    <span class="bubble bubble-1">Problem Solver</span>
-                    <span class="bubble bubble-2">Web Development</span>
-                    <span class="bubble bubble-3">Continuous Learning</span>
+                    <span class="bubble bubble-1">Fresh Graduate</span>
+                    <span class="bubble bubble-2">Software Engineering</span>
+                    <span class="bubble bubble-3">Web & System Development</span>
                 </div>
 
             </div>
@@ -72,19 +87,11 @@
 
             <div class="about-intro">
                 <p>
-                    I am an Information Technology graduate based in Malaysia with a focus on
-                    software engineering and web development.
+                    I am a recent graduate with a Bachelor of Information Technology, majoring in Software Engineering. During my internships, I gained hands-on experience in website development, system support, and UI/UX-related tasks, working on real-world projects that involved client communication, responsive design, and practical problem-solving. I enjoy building functional web applications and continuously improving my technical skills across various software and IT domains.
                 </p>
 
                 <p>
-                    I enjoy building web applications and learning through hands-on projects.
-                    I mainly work with core web technologies such as HTML, CSS, PHP, and MySQL,
-                    while continuously exploring other tools and technologies when required.
-                </p>
-
-                <p>
-                    I am interested in writing clean code, improving problem-solving skills,
-                    and gaining real-world experience as a junior software or web developer.
+                    In addition to development, I pursue creative projects such as video editing and poster design, which help me approach problems from multiple perspectives and bring a creative touch to my work. I am now seeking a full-time role in software or IT-related fields where I can contribute meaningfully while continuing to learn and grow as a professional.
                 </p>
             </div>
 
@@ -96,7 +103,7 @@
                         <p class="major">Major in Software Engineering</p>
                         <p class="school">SEGi University, Kota Damansara</p>
                         <p class="dates">Jan 2024 – Dec 2025</p>
-                        <p class="cgpa">Estimated CGPA: 3.73</p>
+                        <p class="cgpa">Estimated CGPA: 3.71</p>
                     </div>
 
                     <div class="education-card">
@@ -109,6 +116,7 @@
             </div>
         </section>
 
+        <!-- Working Experience Section -->
         <section id="experience" class="experience-section">
             <h2>Working Experience</h2>
             <div class="timeline">
@@ -183,6 +191,10 @@
                             <img src="image/Bootstrap.png" alt="Bootstrap">
                             <span>Bootstrap</span>
                         </div>
+                        <div class="skill">
+                            <img src="image/Wordpress.png" alt="WordPress">
+                            <span>WordPress</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -247,12 +259,28 @@
                 </div>
 
                 <div class="skill-card">
-                    <h3>Tools & Design</h3>
+                    <h3>Programming</h3>
                     <div class="skill-icons">
                         <div class="skill">
-                            <img src="image/Wordpress.png" alt="WordPress">
-                            <span>WordPress</span>
+                            <img src="image/Java.png" alt="Java">
+                            <span>Java</span>
                         </div>
+                        <div class="skill">
+                            <img src="image/C++.png" alt="C++">
+                            <span>C++</span>
+                        </div>
+                        <div class="skill">
+                            <img src="image/CSharp.png" alt="C#">
+                            <span>C#</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-row single-row">
+                <div class="skill-card">
+                    <h3>Tools & Design</h3>
+                    <div class="skill-icons">
                         <div class="skill">
                             <img src="image/Figma.png" alt="Figma">
                             <span>Figma</span>
@@ -314,7 +342,7 @@
                 </div>
 
                 <div class="projects-showcase" data-tab-content="intern" style="display: none;">
-                    <div class="showcase-card">
+                    <div class="showcase-card" data-intern="landing">
                         <h4>Landing Page</h4>
                         <p class="subtitle">Kindergarten & School Websites</p>
                         <img src="image/Landing Page.png" class="layer layer-1" alt="Landing Page">
@@ -324,28 +352,28 @@
                         <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
                     </div>
 
-                    <div class="showcase-card">
-                        <h4>Petopia</h4>
-                        <p class="subtitle">Veterinary Appointment System</p>
-                        <img src="image/FYP Diploma Project.png" class="layer layer-1" alt="FYP Project">
+                    <div class="showcase-card" data-intern="corporate">
+                        <h4>Corporate & E-commerce</h4>
+                        <p class="subtitle">5-Page & E-commerce Websites</p>
+                        <img src="image/Corporate.png" class="layer layer-1" alt="Corporate Project">
                         <p class="description">
-                        A web-based online booking system for pet owners to schedule veterinary appointments easily.
+                        Designed and developed responsive websites, collaborating with teammates on UI design and frontend implementation.
                         </p>
                         <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
                     </div>
 
-                    <div class="showcase-card">
-                        <h4>CookIn5</h4>
-                        <p class="subtitle">5-Minute Recipe Mobile App</p>
-                        <img src="image/Mobile Project.png" class="layer layer-1" alt="Mobile Application">
+                    <div class="showcase-card" data-intern="update">
+                        <h4>Website Updates</h4>
+                        <p class="subtitle">Maintaining & Improving Existing Sites</p>
+                        <img src="image/Update Websites.png" class="layer layer-1" alt="Update Websites">
                         <p class="description">
-                        Mobile app that helps users discover quick, practical recipes ready in under five minutes.
+                        Updated website designs and layouts according to client feedback, improving user experience and visual presentation.
                         </p>
                         <button class="arrow-btn"><img src="https://img.icons8.com/?size=100&id=3we6QhkgvXBB&format=png&color=000000" alt="arrow"></button>
                     </div>
                 </div>
 
-                <div class="project-modal" id="projectModal">
+                <div class="project-modal" id="projectModalUniversity">
                     <div class="modal-content">
                         <span class="modal-close">&times;</span>
 
@@ -388,8 +416,141 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="project-modal" id="projectModalIntern">
+                    <div class="modal-content intern">
+
+                        <span class="modal-close">&times;</span>
+
+                        <h3 id="internTitle"></h3>
+                        <p id="internSubtitle" class="modal-subtitle"></p>
+
+                        <!-- Image slider -->
+                        <div class="modal-slider">
+                            <button class="slide-btn prev">‹</button>
+                        <div class="slider-viewport">
+                            <img id="internImage" src="" alt="">
+                        </div>
+                            <button class="slide-btn next">›</button>
+                        </div>
+
+                        <!-- Website links -->
+                        <div class="intern-links">
+                            <div class="link-grid" id="internLinks"></div>
+                        </div>
+
+                        <!-- Your role -->
+                        <div class="modal-section">
+                            <h4>My Contribution</h4>
+                            <p id="internRole"></p>
+                        </div>
+
+                        <p class="intern-note">
+                        *Websites shown are developed during internship for client use.
+                        </p>
+
+                    </div>
+                </div>
         </section>
         
-    <script src="script.js"></script>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send Me a Message</h3>
+
+                    <form id="emailContactForm">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                        <button type="submit" id="sendBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+
+                    <div class="info-item">
+                        <span><img src="https://img.icons8.com/?size=100&id=871oLGUszTd7&format=png&color=000000" alt="WhatsApp"></span>
+                        <p><a href="https://wa.me/601110743016" target="_blank" class="contact-link">+60 11-1074 3016</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <span><img src="https://img.icons8.com/?size=100&id=XUG5Oavns1bS&format=png&color=000000" alt="Email"></span>
+                        <p><a href="mailto:winson03tan@gmail.com" class="contact-link">winson03tan@gmail.com</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <span><img src="https://img.icons8.com/?size=100&id=Fto28UC6Owy0&format=png&color=000000" alt="LinkedIn"></span>
+                        <p><a href="https://www.linkedin.com/in/weng-soon-tan-784162273/" target="_blank" class="contact-link">WENG SOON TAN</a></p>
+                    </div>
+
+                    <div class="info-item">
+                        <span><img src="https://img.icons8.com/?size=100&id=FVTvJkWPqGJ3&format=png&color=000000" alt="GitHub"></span>
+                        <p><a href="https://github.com/winson03" target="_blank" class="contact-link">winson03</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-container">
+
+                <div class="footer-brand">
+                    <h4>Tan Weng Soon (Winson)</h4>
+                    <p>Software Engineering graduate with experience delivering real-world web projects for clients.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="resume/Tan-Weng-Soon-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+
+                    <a href="https://wa.me/601110743016" target="_blank" class="contact-item">
+                        <img src="https://img.icons8.com/?size=100&id=871oLGUszTd7&format=png&color=000000" alt="WhatsApp">
+                        <span>+60 11-1074 3016</span>
+                    </a>
+
+                    <a href="mailto:winson03tan@gmail.com" class="contact-item">
+                        <img src="https://img.icons8.com/?size=100&id=XUG5Oavns1bS&format=png&color=000000" alt="Email">
+                        <span>winson03tan@gmail.com</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/weng-soon-tan-784162273/" target="_blank" class="contact-item">
+                        <img src="https://img.icons8.com/?size=100&id=Fto28UC6Owy0&format=png&color=000000" alt="LinkedIn">
+                        <span>WENG SOON TAN</span>
+                    </a>
+
+                    <a href="https://github.com/winson03" class="contact-item">
+                        <img src="https://img.icons8.com/?size=100&id=FVTvJkWPqGJ3&format=png&color=000000" alt="GitHub">
+                        <span>winson03</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Tan Weng Soon. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfR-EcsAAAAAD-6Rn-s3NMvO0Xt7X7-rkGbLI3I&hl=en" async defer></script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
